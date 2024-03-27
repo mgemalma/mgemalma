@@ -201,6 +201,12 @@ body
   }
 }
 
+@media (max-height: 880px) {
+  #firstMap {
+    display: none !important; /* Smaller width for tighter spaces */
+  }
+}
+
 @media (min-width: 1200px) {
   /* Styles that affect the layout on desktop or larger screens */
   .container {
@@ -237,7 +243,7 @@ body
   }
 }
 
-@media (max-height: 675px){
+@media (max-height: 750px){
     .container {
       flex-direction: column;
       padding-top: 0;
