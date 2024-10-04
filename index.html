@@ -910,7 +910,7 @@ body {
         </a>
         <div id="cv2" class="cv-info" style="font-family: Arial, sans-serif; font-size: 20px; color: #666;">
             <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank" onmouseover="this.style.color='#C28E0F'; this.style.borderBottom='2px solid transparent';" onmouseout="this.style.color='#666'; this.style.borderBottom='2px solid #ccc';" style="text-decoration: none; color: inherit; border-bottom: 2px solid #ccc; transition: color 0.3s ease, border-bottom 0.3s ease; font-size: 22px;">Curriculum Vitae</a>
-            <p id="footnote_cv" style="font-size: 18px;">(Last Updated: April 26, 2024)</p>
+            <p id="footnote_cv" style="font-size: 18px;"></p>
           </div>
 
 
@@ -1065,7 +1065,7 @@ body {
                onmouseout="this.style.color='black'; this.style.borderBottom='1px solid grey';">
                 Curriculum Vitae
             </a><br>
-            <p class= "cv-text" style="font-size: 12px;">(Last Updated: April 26, 2024)</p>
+            <p class= "cv-text" style="font-size: 12px;"></p>
         </div>
 
 
@@ -1089,6 +1089,27 @@ body {
 </div>
 
 <script>
+
+
+  // Define a global variable for the updated date
+  var lastUpdatedDate = "Oct 4, 2024"; // You can set this to any desired value
+
+  // Function to update the text of the elements
+  function updateText() {
+    // Update the element with the class "cv-text"
+    var cvTextElements = document.getElementsByClassName("cv-text");
+    for (var i = 0; i < cvTextElements.length; i++) {
+      cvTextElements[i].textContent = "(Last Updated: " + lastUpdatedDate + ")";
+    }
+
+    // Update the element with the id "footnote_cv"
+    document.getElementById("footnote_cv").textContent = "(Last Updated: " + lastUpdatedDate + ")";
+  }
+
+  // Call the function to immediately update the text on page load
+  updateText();
+
+
 
 // document.getElementById('moreNewsLink').addEventListener('click', function() {
 //     // Hide sections with display: none
