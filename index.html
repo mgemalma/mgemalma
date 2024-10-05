@@ -878,6 +878,43 @@ body {
     text-decoration: underline;
   }
 
+  .cv-btn {
+    font-size: 16px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.cv-btn-cv {
+    background-color: #4CAF50;
+}
+
+.cv-btn-resume {
+    background-color: #C28E0F;
+}
+
+@media (max-width: 768px) {
+    .cv-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 520px) {
+    .cv-btn {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+}
+
 
 
 </style>
@@ -1087,23 +1124,24 @@ body {
         <div class="cv-info" style="margin-top: 0px; text-align: center;">
 
           <!-- Button for CV in mobile view -->
-          <div style="margin-bottom: 15px;">
-            <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank" style="text-decoration: none;">
-                <button style="font-size: 16px; padding: 8px 15px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; transition: background-color 0.3s ease;">
-                    <i class="fas fa-file-alt"></i> Curriculum Vitae
-                    <i class="fas fa-download"></i>
-                </button>
-            </a>
-        </div>
-          <!-- Button for Résumé in mobile view -->
-          <div style="margin-bottom: 15px;">
-              <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank" style="text-decoration: none;">
-                  <button style="font-size: 16px; padding: 8px 15px; background-color: #C28E0F; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
-                      <i class="fas fa-file" style="margin-right: 8px;"></i> Résumé
-                      <i class="fas fa-download" style="margin-left: 8px;"></i>
-                  </button>
-              </a>
-          </div>
+    <div style="margin-bottom: 15px;">
+      <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank">
+        <button class="cv-btn cv-btn-cv">
+          <i class="fas fa-file-alt"></i> Curriculum Vitae
+          <i class="fas fa-download"></i>
+        </button>
+      </a>
+    </div>
+
+    <!-- Button for Résumé in mobile view -->
+    <div style="margin-bottom: 15px;">
+      <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank">
+        <button class="cv-btn cv-btn-resume">
+          <i class="fas fa-file"></i> Résumé
+          <i class="fas fa-download"></i>
+        </button>
+      </a>
+    </div>
       
       </div>
 
