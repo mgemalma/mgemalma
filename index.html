@@ -11,6 +11,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="https://gemalmaz.org/favicon-16x16.png">
 <link rel="manifest" href="https://gemalmaz.org/site.webmanifest">
 <link rel="mask-icon" href="https://gemalmaz.org/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <meta name="msapplication-TileColor" content="#2d89ef">
 <meta name="theme-color" content="#ffffff">
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
@@ -903,15 +904,38 @@ body {
     </div>
     <h2 class="title">Meric Altug Gemalmaz</h2>
     <p class="subtitle">PhD Candidate @ Purdue University</p>
-    <div class="cv-section" id="cv-left" style="margin-top: 40px;">
-        <a id="cv1" href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank">
+    <div class="cv-section" id="cv-left" style="margin-top: 0px;">
+        <!-- <a id="cv1" href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank"> -->
           <!-- <img class="cv-icon" style="width: 115px;" src="https://mgemalma.github.io/mgemalma/Assets/cv_icon.png" alt="CV Icon"> -->
-          <div style="width: 115px; height: 115px;" class="cv-icon"></div>
-        </a>
-        <div id="cv2" class="cv-info" style="font-family: Arial, sans-serif; font-size: 20px; color: #666;">
-            <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank" onmouseover="this.style.color='#C28E0F'; this.style.borderBottom='2px solid transparent';" onmouseout="this.style.color='#666'; this.style.borderBottom='2px solid #ccc';" style="text-decoration: none; color: inherit; border-bottom: 2px solid #ccc; transition: color 0.3s ease, border-bottom 0.3s ease; font-size: 22px;">Curriculum Vitae</a>
-            <p id="footnote_cv" style="font-size: 18px;"></p>
+          <!-- <div style="width: 115px; height: 115px;" class="cv-icon"></div> -->
+        <!-- </a> -->
+        <!-- Include Font Awesome CDN for Icons -->
+
+
+        <div id="cv2" class="cv-info" style="font-family: Arial, sans-serif; font-size: 20px; color: #666; text-align: center;">
+
+          <!-- Button for CV -->
+          <div style="margin-bottom: 15px;">
+              <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank" style="text-decoration: none;">
+                  <button style="font-size: 18px; padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+                      <i class="fas fa-file-alt" style="margin-right: 10px;"></i> Curriculum Vitae
+                      <i class="fas fa-download" style="margin-left: 10px;"></i>
+                  </button>
+              </a>
           </div>
+      
+          <!-- Button for Résumé -->
+          <div style="margin-bottom: 15px;">
+              <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank" style="text-decoration: none;">
+                  <button style="font-size: 18px; padding: 10px 20px; background-color: #C28E0F; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+                      <i class="fas fa-file" style="margin-right: 10px;"></i> Résumé
+                      <i class="fas fa-download" style="margin-left: 10px;"></i>
+                  </button>
+              </a>
+          </div>
+      
+      </div>
+
 
 
 
@@ -933,11 +957,11 @@ body {
         <!-- <p class="text_Reg">I am a PhD candidate in the field of human-computer interaction and machine learning, advised by Assistant Professor Ming Yin. My research centers on leveraging crowd wisdom to enhance machine intelligence (i.e., crowdsourcing and social computing), with a particular focus on addressing issues of fairness and bias in AI.</p> -->
 
         <!-- <p class="text_Reg">I am a PhD candidate in the <a href="https://www.cs.purdue.edu/" target="_blank">Department of Computer Science</a>, <a href="https://purdue.edu/" target="_blank">Purdue University</a>. My research interests are in the fields of human-computer interaction, human-AI interaction and applied artificial intelligence. Under the guidance of <a href="http://mingyin.org" target="_blank">Dr. Ming Yin</a>, I mostly focus on leveraging crowd wisdom to enhance artificial intelligence (AI), particularly in addressing challenges related to bias and fairness in AI. I am dedicated to increasing the comprehension of bias in AI systems, specifically addressing its potential origins and effects at various stages of the AI development pipeline. I am keen to participate in projects aimed at understanding, modeling, and mitigating these challenges. My work to date has provided a human-in-the-loop perspective in two key aspects: how people contribute their biases to AI-based decision systems and how these biases, in turn, impact them. This impact includes their perceptions of fairness in AI systems and their engagement with the technology. Through my research endeavors, I have had the privilege of publishing my work in esteemed venues such as <a href="https://ijcai-21.org/" target="_blank">IJCAI21</a>, <a href="https://www.aies-conference.com/2022/" target="_blank">AIES22</a>.</p> -->
-        <p class="text_Reg">I am a PhD candidate in the <a href="https://www.cs.purdue.edu/" target="_blank">Department of Computer Science</a> at <a href="https://purdue.edu/" target="_blank">Purdue University</a>, advised by <a href="http://mingyin.org" target="_blank">Dr. Ming Yin</a>. My research interests are in the fields of <b class="emphasize"><span>human-AI interaction</span></b>, <b class="emphasize"><span>applied artificial intelligence</span></b>, and <b class="emphasize"><span>fairness</span></b>. Specifically, I focus on investigating fairness issues in the artificial intelligence (AI) development pipeline from a human-in-the-loop perspective. This includes examining how human biases sneak into AI models and how to mitigate these biases. As well as understanding how humans perceive and react to AI models with different fairness properties, especially if they can strategically respond to AI models' decisions. My research has led to publications at top-tier AI venues, including the International Joint Conference on Artificial Intelligence (<a href="https://ijcai-21.org/" target="_blank">IJCAI</a>) and the AAAI/ACM Conference on AI Ethics and Society (<a href="https://www.aies-conference.com/2022/" target="_blank">AIES</a>).</p>
+        <p class="text_Reg">I am a PhD candidate in the <a href="https://www.cs.purdue.edu/" target="_blank">Department of Computer Science</a> at <a href="https://purdue.edu/" target="_blank">Purdue University</a>, advised by <a href="http://mingyin.org" target="_blank">Dr. Ming Yin</a>. My research interests are in the fields of <b class="emphasize"><span>human-AI interaction</span></b>, <b class="emphasize"><span>applied AI</span></b>, and <b class="emphasize"><span>fairness</span></b>. Specifically, I focus on investigating fairness issues in the AI development pipeline from a human-in-the-loop perspective.</p>
         <!-- <p class="text_Reg">Through my research, I aim to contribute to the development of more equitable and socially responsible AI systems. I seek to first understand the nature of bias in AI systems and then identify effective ways to address them.</p> -->
-        <p class="text_Reg" style="padding-top: 10px;">
+        <!-- <p class="text_Reg" style="padding-top: 10px;">
             In addition to my research, I have been recognized with several teaching awards for my role as a Graduate Teaching Assistant. One such honor is the <a href="https://www.cs.purdue.edu/graduate/gta-award-winners.html" target="_blank">Graduate Teaching Award</a>, received in Fall 2022, in supporting a graduate-level data mining class. Additionally, in 2020, I was awarded the prestigious <a href="https://www.cs.purdue.edu/news/articles/2020/2020-cs-awards.html" target="_blank">Raymond Boyce Graduate Teacher Award</a> for my teaching assistance to an undergraduate-level computer architecture class.
-          </p>
+          </p> -->
           <p class="text_Reg" style="padding-top: 10px;"> Before attending graduate school, I received my bachelor's degree from <a href="https://purdue.edu/" target="_blank">Purdue University</a>, <a href="https://www.cs.purdue.edu/" target="_blank">Department of Computer Science</a> with distinction in December 2018.</p>
         </div>
       <hr class="custom-divider">
@@ -1056,19 +1080,33 @@ body {
   <!-- Removed <br> tags as they force a new line -->
 <div class="container1">
     <div id="element1" style="width: 180px; padding-top: 9px;">
-        <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank" style="margin-bottom: -2px;">
+        <!-- <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank" style="margin-bottom: -2px;"> -->
             <!-- <img class="cv-icon" style="width: 60px;" src="https://mgemalma.github.io/mgemalma/Assets/cv_icon.png" alt="CV Icon"> -->
-            <div style="width: 60px; height: 60px;" class="cv-icon"></div>
-        </a>
-        <div class="cv-info" style="margin-top: 0px;">
-            <a class= "cv-text-big" href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank"
-               style="font-size: 15px; color: black; text-decoration: none; border-bottom: 1px solid grey; transition: color 0.3s ease, border-bottom 0.3s ease;"
-               onmouseover="this.style.color='#C28E0F'; this.style.borderBottom='1px solid transparent';"
-               onmouseout="this.style.color='black'; this.style.borderBottom='1px solid grey';">
-                Curriculum Vitae
-            </a><br>
-            <p class= "cv-text" style="font-size: 12px;"></p>
-        </div>
+            <!-- <div style="width: 60px; height: 60px;" class="cv-icon"></div> -->
+        <!-- </a> -->
+        <div class="cv-info" style="margin-top: 0px; text-align: center;">
+
+          <!-- Button for CV in mobile view -->
+          <div style="margin-bottom: 15px;">
+              <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank" style="text-decoration: none;">
+                  <button style="font-size: 16px; padding: 8px 15px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+                      <i class="fas fa-file-alt" style="margin-right: 8px;"></i> Curriculum Vitae
+                      <i class="fas fa-download" style="margin-left: 8px;"></i>
+                  </button>
+              </a>
+          </div>
+      
+          <!-- Button for Résumé in mobile view -->
+          <div style="margin-bottom: 15px;">
+              <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank" style="text-decoration: none;">
+                  <button style="font-size: 16px; padding: 8px 15px; background-color: #C28E0F; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease;">
+                      <i class="fas fa-file" style="margin-right: 8px;"></i> Résumé
+                      <i class="fas fa-download" style="margin-left: 8px;"></i>
+                  </button>
+              </a>
+          </div>
+      
+      </div>
 
 
     </div>
@@ -1093,23 +1131,23 @@ body {
 <script>
 
 
-  // Define a global variable for the updated date
-  var lastUpdatedDate = "Oct 4, 2024"; // You can set this to any desired value
+  // // Define a global variable for the updated date
+  // var lastUpdatedDate = "Oct 4, 2024"; // You can set this to any desired value
 
-  // Function to update the text of the elements
-  function updateText() {
-    // Update the element with the class "cv-text"
-    var cvTextElements = document.getElementsByClassName("cv-text");
-    for (var i = 0; i < cvTextElements.length; i++) {
-      cvTextElements[i].textContent = "(Last Updated: " + lastUpdatedDate + ")";
-    }
+  // // Function to update the text of the elements
+  // function updateText() {
+  //   // Update the element with the class "cv-text"
+  //   var cvTextElements = document.getElementsByClassName("cv-text");
+  //   for (var i = 0; i < cvTextElements.length; i++) {
+  //     cvTextElements[i].textContent = "(Last Updated: " + lastUpdatedDate + ")";
+  //   }
 
-    // Update the element with the id "footnote_cv"
-    document.getElementById("footnote_cv").textContent = "(Last Updated: " + lastUpdatedDate + ")";
-  }
+  //   // Update the element with the id "footnote_cv"
+  //   document.getElementById("footnote_cv").textContent = "(Last Updated: " + lastUpdatedDate + ")";
+  // }
 
-  // Call the function to immediately update the text on page load
-  updateText();
+  // // Call the function to immediately update the text on page load
+  // updateText();
 
 
 
@@ -1146,6 +1184,10 @@ const animateCSS = (element, animation, dark, go, duration, delay, prefix = 'ani
       node.classList.add('delayed-mix-blend');
     }
 
+    if (node == null)
+    {
+      return;
+    }
     // Add custom animation duration and delay
     node.style.animationDuration = duration;
     node.style.animationDelay = delay;
