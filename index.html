@@ -242,6 +242,9 @@ body
   #cv-right {
     display: none; /* Hide duplicate CV in right-side */
   }
+  #cv-right-new {
+    display: none; /* Show duplicate CV in right-side */
+  }
 }
 
 @media (max-height: 750px){
@@ -309,6 +312,10 @@ body
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     text-align: center; /* Center align the text if it's not already centered */
 
+  }
+
+  #cv-right-new {
+    display: flex !important; /* Show duplicate CV in right-side */
   }
 
   .cv-info
@@ -398,6 +405,10 @@ body
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     text-align: center; /* Center align the text if it's not already centered */
 
+  }
+
+  #cv-right-new {
+    display: flex !important; /* Show duplicate CV in right-side */
   }
 
   .cv-info
@@ -930,8 +941,16 @@ body {
         padding: 4px 10px;
     }
 }
+.cv-info1 {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease; /* Smooth transition */
+  }
 
-
+  .cv-info1:hover {
+    color: #1a75ff; /* Hover color */
+  }
 
 </style>
 </head>
@@ -973,6 +992,15 @@ body {
     </div>
     <h2 class="title">Meric Altug Gemalmaz</h2>
     <p class="subtitle">PhD Candidate @ Purdue University</p>
+    <div id="cv-right-new" style="display: none; justify-content: center; gap: 20px; margin-bottom: 15px;">
+      <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank" style="font-size: 24px; text-decoration: none; display: flex; align-items: center;">
+        <i class="fas fa-file-alt" style="margin-right: 8px;"></i> CV
+      </a>
+      <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank" style="font-size: 24px; text-decoration: none; display: flex; align-items: center;">
+        <i class="fas fa-file" style="margin-right: 8px;"></i> Résumé
+      </a>
+    </div>
+    
     <div class="cv-section" id="cv-left" style="margin-top: 0px;">
         <!-- <a id="cv1" href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank"> -->
           <!-- <img class="cv-icon" style="width: 115px;" src="https://mgemalma.github.io/mgemalma/Assets/cv_icon.png" alt="CV Icon"> -->
@@ -1148,38 +1176,38 @@ body {
     <div class="cv-section" id="cv-right" style="display: none;">
   <!-- Removed <br> tags as they force a new line -->
 <div class="container1">
-    <div id="element1" style="width: 180px; padding-top: 9px;">
+
+      <!-- <div id="element1" style="width: 180px; padding-top: 9px;"> -->
         <!-- <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank" style="margin-bottom: -2px;"> -->
             <!-- <img class="cv-icon" style="width: 60px;" src="https://mgemalma.github.io/mgemalma/Assets/cv_icon.png" alt="CV Icon"> -->
             <!-- <div style="width: 60px; height: 60px;" class="cv-icon"></div> -->
         <!-- </a> -->
-        <div class="cv-info" style="margin-top: 0px; text-align: center;">
+        <!-- <div class="cv-info" style="margin-top: 0px; text-align: center;"> -->
 
           <!-- Button for CV in mobile view -->
-    <div style="margin-bottom: 15px;">
+    <!-- <div style="margin-bottom: 15px;">
       <a href="https://mgemalma.github.io/mgemalma/CV/Meric_Altug_Gemalmaz_CV.pdf" class="cv-info1" target="_blank">
         <button class="cv-btn cv-btn-cv">
           <i class="fas fa-file-alt"></i> Curriculum Vitae
           <i class="fas fa-download"></i>
         </button>
       </a>
-    </div>
+    </div> -->
 
     <!-- Button for Résumé in mobile view -->
-    <div style="margin-bottom: 15px;">
+    <!-- <div style="margin-bottom: 15px;">
       <a href="https://mgemalma.github.io/mgemalma/Resume/Meric_Altug_Gemalmaz_Resume.pdf" class="cv-info1" target="_blank">
         <button class="cv-btn cv-btn-resume">
           <i class="fas fa-file"></i> Résumé
           <i class="fas fa-download"></i>
         </button>
       </a>
-    </div>
+    </div> -->
 
-      </div>
+      <!-- </div> -->
 
 
-    </div>
-
+    <!-- </div> -->
     <div id="element2" class="dontInvert" style="width: 200px; display:none">
         <div id="visitDetailsContainer" style="width: 200px;">
             <a id="visitDetailsLink" href="https://clustrmaps.com/site/1bz9i" title="Visit tracker" target="_blank" style="text-decoration: none; cursor: pointer;">
@@ -1320,6 +1348,7 @@ animFunc = function(dark)
   animateCSS('.profile-pic', 'fadeInDown', dark, true,'1s', '0.5s' );
   animateCSS('.title', 'fadeInDown', dark, false ,'1s', '0.5s');
   animateCSS('.subtitle', 'fadeInDown', dark, false ,'1s', '0.5s');
+  animateCSS('#cv-right-new', 'fadeInDown', dark, false ,'1s', '0.5s');
   animateCSS('#cv1', 'fadeInDown', dark, false ,'1s', '0.8s');
   animateCSS('#cv2', 'fadeInDown', dark, false ,'1s', '0.8s');
   animateCSS('#firstMap', 'fadeInDown', dark, false ,'1s', '0.8s');
