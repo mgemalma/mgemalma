@@ -4,8 +4,6 @@ Visit my personal webpage: [gemalmaz.org](https://gemalmaz.org), where I share m
 
 Let’s also connect on LinkedIn: [Meric Altug Gemalmaz](https://www.linkedin.com/in/meric-altug-gemalmaz/) 🤖
 
-🌟 **Seeking Software Engineering roles starting May 2025.** 🌟
-
 
 
 
