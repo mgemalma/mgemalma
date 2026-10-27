@@ -260,7 +260,7 @@
      work began from), and Purdue studied the whole loop. A lens
      swaps only the sentence below and the panel beneath it; the
      nodes themselves always stay at full strength. */
-  .pipe-toggles{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;width:fit-content;max-width:100%;margin:0 auto 28px;background:color-mix(in srgb,var(--surface-2) 82%,var(--surface));border:1px solid color-mix(in srgb,var(--line) 80%,var(--accent) 20%);border-radius:999px;padding:5px;box-shadow:inset 0 1px 3px rgba(18,52,84,.08),0 1px 2px rgba(18,52,84,.05)}
+  .pipe-toggles{position:relative;z-index:6;display:flex;flex-wrap:wrap;gap:4px;justify-content:center;width:fit-content;max-width:100%;margin:0 auto 28px;background:color-mix(in srgb,var(--surface-2) 82%,var(--surface));border:1px solid color-mix(in srgb,var(--line) 80%,var(--accent) 20%);border-radius:999px;padding:5px;box-shadow:inset 0 1px 3px rgba(18,52,84,.08),0 1px 2px rgba(18,52,84,.05)}
   .pipe-toggle{appearance:none;font:inherit;font-size:14.5px;font-weight:700;color:var(--muted);background:transparent;border:1px solid transparent;border-radius:999px;padding:8px 20px;cursor:pointer;transition:border-color .15s ease,color .15s ease,background .15s ease}
   .pipe-toggle:hover{color:var(--ink)}
   .pipe-toggle[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent);box-shadow:var(--shadow)}
@@ -329,7 +329,7 @@
   .loop-node{transition:opacity .35s ease,filter .35s ease,transform .18s ease,box-shadow .18s ease}
   @media (prefers-reduced-motion: reduce){.loop-node,.pipe-toggle{transition:none}.reveal-in button.loop-node{animation:none}.pipe-panel:not([hidden]){animation:none}.pipe-panel:not([hidden]) .exp{animation:none}button.loop-node:hover,button.loop-node:active{transform:translate(-50%,-50%)}}
   .loop{position:relative;max-width:640px;margin:0 auto;aspect-ratio:640/500}
-  .loop-svg{position:absolute;inset:0;width:100%;height:100%;transform-origin:50% 50%}
+  .loop-svg{position:absolute;inset:0;width:100%;height:100%;transform-origin:50% 50%;pointer-events:none}
   .loop-svg .loop-disc{fill:var(--accent-tint);stroke:color-mix(in srgb,var(--line) 70%,var(--accent) 30%);stroke-width:1;opacity:.5}
   .loop-svg .loop-halo{fill:none;stroke:var(--line);stroke-width:1.5;stroke-linecap:round;stroke-dasharray:2 8;opacity:.85}
   .loop-svg path{fill:none;stroke:var(--gold);stroke:url(#loopGrad);stroke-width:4.5;stroke-linecap:round;opacity:1}
