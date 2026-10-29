@@ -1919,27 +1919,40 @@
   }
 
   // Theme-synced favicon: Aurora in light mode, Midnight glass in
-  // dark mode. No animation. The icon links in <head> start on Aurora;
-  // this swaps them to Midnight glass when the site theme is dark,
-  // following the site toggle (Auto / Light / Dark) and the device
-  // setting in Auto mode. The favicon.ico file stays as a fallback.
+  // dark mode. No animation. Unlike a plain href swap, this removes
+  // the old icon links (including favicon.ico, which some browsers
+  // prefer over the PNG links) and inserts fresh ones, because
+  // changing href alone does not reliably refresh the tab icon in
+  // every browser. It follows the site toggle (Auto / Light / Dark)
+  // and the device setting in Auto mode.
   (function(){
     try {
-      var link32 = document.querySelector('link[rel="icon"][type="image/png"][sizes="32x32"]');
-      var link16 = document.querySelector('link[rel="icon"][type="image/png"][sizes="16x16"]');
-      if (!link32 || !link16) return;
       function effectiveTheme(){
         var forced = document.documentElement.getAttribute('data-theme');
         if (forced === 'dark') return 'dark';
         if (forced === 'light') return 'light';
         return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
       }
+      function addIcon(sizes, href){
+        var l = document.createElement('link');
+        l.rel = 'icon';
+        l.type = 'image/png';
+        if (sizes) l.setAttribute('sizes', sizes);
+        l.href = href;
+        document.head.appendChild(l);
+      }
       function applyFavicon(){
         var dark = effectiveTheme() === 'dark';
-        link32.href = dark ? 'https://gemalmaz.org/favicon-midnight-32x32.png' : 'https://gemalmaz.org/favicon-aurora-32x32.png';
-        link16.href = dark ? 'https://gemalmaz.org/favicon-midnight-16x16.png' : 'https://gemalmaz.org/favicon-aurora-16x16.png';
+        var href32 = dark ? 'https://gemalmaz.org/favicon-midnight-32x32.png' : 'https://gemalmaz.org/favicon-aurora-32x32.png';
+        var href16 = dark ? 'https://gemalmaz.org/favicon-midnight-16x16.png' : 'https://gemalmaz.org/favicon-aurora-16x16.png';
+        var old = Array.prototype.slice.call(document.querySelectorAll('link[rel~="icon"]'));
+        old.forEach(function(l){ if (l.parentNode) l.parentNode.removeChild(l); });
+        addIcon('32x32', href32);
+        addIcon('16x16', href16);
       }
       applyFavicon();
+      var themeBtnEl = document.getElementById('themeToggle');
+      if (themeBtnEl) themeBtnEl.addEventListener('click', function(){ setTimeout(applyFavicon, 0); });
       if (window.matchMedia){
         var darkMedia = window.matchMedia('(prefers-color-scheme: dark)');
         if (darkMedia.addEventListener) darkMedia.addEventListener('change', applyFavicon);
