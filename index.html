@@ -846,7 +846,7 @@
 <section class="statement-sec" aria-label="The gist of my work">
   <div class="wrap">
     <p class="pitch-label" aria-hidden="true">The gist of my work</p>
-    <p class="statement">My PhD followed the machine learning pipeline from the data people create, through the models that data shapes, to the model decisions people experience. At Meta I build that pipeline itself, for real users, from ranking what people see to the data models learn from.</p>
+    <p class="statement">My PhD followed the machine learning pipeline from the data people produce, through the models that data shapes, to the model decisions people experience. At Meta I build that pipeline itself, for real users, from ranking what people see to the data models learn from.</p>
   </div>
 </section>
 
@@ -885,7 +885,7 @@
         <button type="button" class="loop-node n-decision" data-node="decision" aria-pressed="false" aria-controls="nodeCard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.4"/><circle cx="6" cy="18.5" r="2.4"/><circle cx="18" cy="7.5" r="2.4"/><path d="M6 7.9v8.2M18 9.9c0 4.6-6.2 4.2-9.3 6.4"/></svg><b>Decision</b></button>
         <button type="button" class="loop-node n-people" data-node="people" aria-pressed="false" aria-controls="nodeCard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="7.8" r="3.1"/><path d="M3.4 19.6c.6-3 2.7-4.6 5.6-4.6s5 1.6 5.6 4.6"/><path d="M15.6 5.2a3.1 3.1 0 0 1 0 5.7M17.9 15.4c1.4.7 2.3 2 2.6 4.2"/></svg><b>People</b></button>
       </div>
-      <p class="pipe-sentence" id="pipeSentence" aria-live="polite">People create data. A model learns from it and makes decisions about people. People react to the decisions made about them, and their reactions are collected as data and used to update the model again, so the cycle starts again.</p>
+      <p class="pipe-sentence" id="pipeSentence" aria-live="polite">People produce data. A model learns from it and makes decisions about people. People react to the decisions made about them, and their reactions are collected as data and used to update the model again, so the cycle starts again.</p>
       <div class="node-card" id="nodeCard" hidden aria-live="polite">
         <h3 id="nodeCardTitle"></h3>
         <p id="nodeCardText"></p>
@@ -898,7 +898,7 @@
         <div class="exp-dates">Jun 2026 — Present</div>
         <div>
           <h3>Meta AI Org</h3>
-          <p>I help AI systems become better (SOTA). At Meta AI, I work on the data that AI models learn from: improving the data we already have, and creating new data for models to learn from. I also build the step-by-step tools and workflows that make this work possible, and evaluate AI agent systems.</p>
+          <p>I help AI systems become better (SOTA). At Meta AI, I work on the data that AI models learn from: improving the data we already have, and creating new data for models to learn from. I also build the workflows that produce that data, and I evaluate the AI agent systems that learn from it.</p>
                   </div>
       </article>
       <article class="exp" id="exp-fb-groups">
@@ -924,7 +924,7 @@
         <div class="exp-dates">Completed June 2025</div>
         <div>
           <h3>Ph.D., Purdue University</h3>
-          <p>Computer Science, completed June 2025. Advised by Dr. Ming Yin. This loop became my dissertation. Its four papers, generated from this loop, are in the next section.</p>
+          <p>Computer Science, completed June 2025. Advised by Dr. Ming Yin. This loop became my dissertation. The four papers in the next section follow it.</p>
           <div class="purdue-refs">
             <div class="purdue-ref"><a class="plink" href="#pub-ijcai">Dissertation Chapter 2</a><span class="mode-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 7h2.6M10.4 7H21M3 17h10.6M18.4 17H21"/><circle cx="8" cy="7" r="2.3"/><circle cx="16" cy="17" r="2.3"/></svg>Modeling<span class="dt-sub">built a model</span></span></div>
             <div class="purdue-ref"><a class="plink" href="#pub-aies">Dissertation Chapter 3</a><span class="mode-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Understanding<span class="dt-sub">studied people</span></span></div>
@@ -1493,9 +1493,9 @@
     purdue: document.getElementById('pipePanelPurdue')
   };
   var pipeSentences = {
-    default: 'People create data. A model learns from it and makes decisions about people. People react to the decisions made about them, and their reactions are collected as data and used to update the model again, so the cycle starts again.',
+    default: 'People produce data. A model learns from it and makes decisions about people. People react to the decisions made about them, and their reactions are collected as data and used to update the model again, so the cycle starts again.',
     meta: 'At Meta I build parts of this loop: working on better data, and the ranking that decides what people see in their Facebook feed.',
-    purdue: 'In my Ph.D. I studied this whole loop: how people’s data is produced, and after the models are trained with that data, how they react to the fairness of AI decisions on them when they deal with AI, and how their reactions change the model.'
+    purdue: 'In my Ph.D., I studied the whole loop: how people's data is produced, how models trained on that data make decisions about people, how people react to whether those decisions feel fair, and how those reactions change the model over time.'
   };
   var pipeView = 'default';
   function setPipeView(view){
@@ -1568,7 +1568,7 @@
           links: [["exp-fb-groups", "My FB Groups work"]]
         },
         purdue: {
-          text: "In my Ph.D. I studied models and changed how they decide. In Chapter 2, I built a model that models each person's own bias and uses it to take that bias out of the combined labels. In Chapter 5, I worked with a simple model that keeps updating over time as it hands out tasks to people, and studied how people react to it.",
+          text: "In my Ph.D., I studied models and changed how they decide. In Chapter 2, I changed how a model combines labels, by estimating each person's bias and correcting for it. In Chapter 5, I studied a simple model that updates over time as it assigns tasks, and how people react to the decisions it makes.",
           links: [["pub-ijcai", "Dissertation Chapter 2"], ["pub-chapter5", "Dissertation Chapter 5"]]
         }
       }
@@ -1577,7 +1577,7 @@
       title: "Decision — what the model chooses",
       views: {
         default: {
-          text: "At Meta, my ranking work in FB Groups was what decided which posts people saw: good posts shown more, bad posts less. In my Ph.D., I studied what happens when a model keeps making decisions about people: whether the decisions feel fair changes what people do next (Chapters 3 and 4 of the dissertation).",
+          text: "At Meta, my ranking work in FB Groups was what decided which posts people saw: good posts shown more, bad posts less. In my Ph.D., I studied repeated decisions about people: when a model keeps deciding, whether those decisions feel fair changes what people do next (Chapters 3 and 4 of the dissertation).",
           links: [["exp-fb-groups", "My FB Groups work"], ["pub-aies", "Dissertation Chapter 3"], ["pub-improvement", "Dissertation Chapter 4"]]
         },
         meta: {
@@ -1585,7 +1585,7 @@
           links: [["exp-fb-groups", "My FB Groups work"]]
         },
         purdue: {
-          text: "In my Ph.D., I studied what happens when a model keeps making decisions about people: whether the decisions feel fair changes what people do next (Chapters 3 and 4 of the dissertation).",
+          text: "In my Ph.D., I studied repeated decisions about people: when a model keeps deciding, whether those decisions feel fair changes what people do next (Chapters 3 and 4 of the dissertation).",
           links: [["pub-aies", "Dissertation Chapter 3"], ["pub-improvement", "Dissertation Chapter 4"]]
         }
       }
@@ -1594,7 +1594,7 @@
       title: "People — where the loop starts and ends",
       views: {
         default: {
-          text: "At Meta, the people side of my Groups work was studying people's data to understand what should change, and that understanding guided the ranking changes. In my Ph.D. I studied how people react when they deal with AI decisions again and again — whether they find them fair, and whether they stay (Chapters 3 and 4 of the dissertation).",
+          text: "At Meta, the people side of my Groups work was studying people's data to understand what should change, and that understanding guided the ranking changes. In my Ph.D., I studied the people side of repeated AI decisions: whether people find them fair, whether they stay or leave, and how they respond when they can improve their qualifications (Chapters 3 and 4 of the dissertation).",
           links: [["exp-fb-groups", "My FB Groups work"], ["pub-aies", "Dissertation Chapter 3"], ["pub-improvement", "Dissertation Chapter 4"]]
         },
         meta: {
@@ -1602,7 +1602,7 @@
           links: [["exp-fb-groups", "My FB Groups work"]]
         },
         purdue: {
-          text: "In my Ph.D. I studied how people react when they deal with AI decisions again and again — whether they find them fair, and whether they stay (Chapters 3 and 4 of the dissertation).",
+          text: "In my Ph.D., I studied the people side of repeated AI decisions: whether people find them fair, whether they stay or leave, and how they respond when they can improve their qualifications (Chapters 3 and 4 of the dissertation).",
           links: [["pub-aies", "Dissertation Chapter 3"], ["pub-improvement", "Dissertation Chapter 4"]]
         }
       }
