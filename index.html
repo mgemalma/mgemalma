@@ -144,10 +144,10 @@
   .btn:hover{border-color:var(--accent);color:var(--accent-strong);transform:translateY(-1px)}
   .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
   /* a document's own date, shown quietly inside its button: the résumé
-     and CV are each dated by their file's Last-Modified header (see
-     the script below), not by the page's date; shown as "· Updated
-     Month Year" so the date reads as a last-updated date, with
-     "· Updated June 2025" as the fallback */
+     and CV labels are pinned at publish time, like the page's footer date;
+     shown as "· Updated Month Year" so the date reads as a last-updated
+     date. The labels are not updated automatically; change the label
+     text here when a new résumé or CV is published. */
   .btn .doc-date{font-size:12.5px;font-weight:600;letter-spacing:.02em;opacity:.72}
   .btn.primary:hover{background:var(--accent-strong);color:var(--on-accent-hover)}
   .portrait-card{text-align:center}
@@ -817,8 +817,8 @@
         <a class="btn" href="mailto:mag@gemalmaz.org"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2.3.3L12 11l7.7-5.7H4.3zM20 7.1l-8 5.9-8-5.9V19h16V7.1z"/></svg>mag@gemalmaz.org</a>
         </div>
         <div class="btn-group btn-group-docs" role="group" aria-label="Documents">
-        <a class="btn primary" href="https://gemalmaz.org/Resume/Meric_Altug_Gemalmaz_Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM12 11a1 1 0 0 1 1 1v4.17l1.2-1.2a1 1 0 1 1 1.4 1.4l-2.83 2.83a1 1 0 0 1-1.4 0L8.53 16.37a1 1 0 1 1 1.4-1.4L11 16.17V12a1 1 0 0 1 1-1z"/></svg>Résumé <span class="doc-date" data-doc-date="resume">· Updated June 2025</span></a>
-        <a class="btn" href="https://gemalmaz.org/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM12 11a1 1 0 0 1 1 1v4.17l1.2-1.2a1 1 0 1 1 1.4 1.4l-2.83 2.83a1 1 0 0 1-1.4 0L8.53 16.37a1 1 0 1 1 1.4-1.4L11 16.17V12a1 1 0 0 1 1-1z"/></svg>CV <span class="doc-date" data-doc-date="cv">· Updated June 2025</span></a>
+        <a class="btn primary" href="https://gemalmaz.org/Resume/Meric_Altug_Gemalmaz_Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM12 11a1 1 0 0 1 1 1v4.17l1.2-1.2a1 1 0 1 1 1.4 1.4l-2.83 2.83a1 1 0 0 1-1.4 0L8.53 16.37a1 1 0 1 1 1.4-1.4L11 16.17V12a1 1 0 0 1 1-1z"/></svg>Résumé <span class="doc-date" data-doc-date="resume">· Updated October 2026</span></a>
+        <a class="btn" href="https://gemalmaz.org/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM12 11a1 1 0 0 1 1 1v4.17l1.2-1.2a1 1 0 1 1 1.4 1.4l-2.83 2.83a1 1 0 0 1-1.4 0L8.53 16.37a1 1 0 1 1 1.4-1.4L11 16.17V12a1 1 0 0 1 1-1z"/></svg>CV <span class="doc-date" data-doc-date="cv">· Updated October 2026</span></a>
         </div>
       </div>
     </div>
@@ -1104,8 +1104,8 @@
       <a class="btn" href="https://www.linkedin.com/in/agem/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn</a>
       </div>
       <div class="btn-group btn-group-docs" role="group" aria-label="Documents and intro">
-      <a class="btn" href="https://gemalmaz.org/Resume/Meric_Altug_Gemalmaz_Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM12 11a1 1 0 0 1 1 1v4.17l1.2-1.2a1 1 0 1 1 1.4 1.4l-2.83 2.83a1 1 0 0 1-1.4 0L8.53 16.37a1 1 0 1 1 1.4-1.4L11 16.17V12a1 1 0 0 1 1-1z"/></svg>Résumé <span class="doc-date" data-doc-date="resume">· Updated June 2025</span></a>
-      <a class="btn" href="https://gemalmaz.org/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM12 11a1 1 0 0 1 1 1v4.17l1.2-1.2a1 1 0 1 1 1.4 1.4l-2.83 2.83a1 1 0 0 1-1.4 0L8.53 16.37a1 1 0 1 1 1.4-1.4L11 16.17V12a1 1 0 0 1 1-1z"/></svg>CV <span class="doc-date" data-doc-date="cv">· Updated June 2025</span></a>
+      <a class="btn" href="https://gemalmaz.org/Resume/Meric_Altug_Gemalmaz_Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM12 11a1 1 0 0 1 1 1v4.17l1.2-1.2a1 1 0 1 1 1.4 1.4l-2.83 2.83a1 1 0 0 1-1.4 0L8.53 16.37a1 1 0 1 1 1.4-1.4L11 16.17V12a1 1 0 0 1 1-1z"/></svg>Résumé <span class="doc-date" data-doc-date="resume">· Updated October 2026</span></a>
+      <a class="btn" href="https://gemalmaz.org/CV/Meric_Altug_Gemalmaz_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM12 11a1 1 0 0 1 1 1v4.17l1.2-1.2a1 1 0 1 1 1.4 1.4l-2.83 2.83a1 1 0 0 1-1.4 0L8.53 16.37a1 1 0 1 1 1.4-1.4L11 16.17V12a1 1 0 0 1 1-1z"/></svg>CV <span class="doc-date" data-doc-date="cv">· Updated October 2026</span></a>
       <button class="btn" id="copyIntro" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h11a2 2 0 0 1 2 2v11h-2V5H8V3zM5 7h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zm0 2v11h11V9H5z"/></svg>Copy short intro about me</button>
       </div>
     </div>
@@ -1142,37 +1142,7 @@
     if (!isNaN(bd.getTime())) lastUpdatedEl.textContent = MONTH_NAMES[bd.getMonth()] + ' ' + bd.getFullYear();
   }
 
-  // Automatic Résumé / CV dates: at page load, HEAD-fetch each PDF and
-  // render its Last-Modified header (the file / commit timestamp the
-  // server reports) as "· Updated Month Year" on every button for that
-  // document, so the date reads as a last-updated date, not a bare date.
-  // Updating the PDF therefore updates its label with no page edit.
-  // If the fetch fails or no header is available, the static fallback
-  // label already in the markup stays (Résumé / CV: · Updated June 2025).
-  var MONTH_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  var DOC_URLS = {
-    resume: 'https://gemalmaz.org/Resume/Meric_Altug_Gemalmaz_Resume.pdf',
-    cv: 'https://gemalmaz.org/CV/Meric_Altug_Gemalmaz_CV.pdf'
-  };
-  function applyDocDate(key, date){
-    document.querySelectorAll('[data-doc-date="' + key + '"]').forEach(function(el){
-      if (el.getAttribute('data-format') === 'short'){
-        el.textContent = '· Updated ' + MONTH_SHORT[date.getMonth()] + ' ' + date.getFullYear();
-      } else {
-        el.textContent = '· Updated ' + MONTH_NAMES[date.getMonth()] + ' ' + date.getFullYear();
-      }
-    });
-  }
-  Object.keys(DOC_URLS).forEach(function(key){
-    try {
-      fetch(DOC_URLS[key], { method: 'HEAD' }).then(function(res){
-        var lm = res && res.headers ? res.headers.get('Last-Modified') : null;
-        if (!lm) return;
-        var d = new Date(lm);
-        if (!isNaN(d.getTime())) applyDocDate(key, d);
-      }).catch(function(){ /* keep the fallback label */ });
-    } catch (e) { /* keep the fallback label */ }
-  });
+  
 
   // BibTeX copy
   var BIBTEX = {
