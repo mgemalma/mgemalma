@@ -1,0 +1,35 @@
+name: Update document dates
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Resume/Meric_Altug_Gemalmaz_Resume.pdf'
+      - 'CV/Meric_Altug_Gemalmaz_CV.pdf'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-doc-dates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Update document dates
+        run: |
+          RESUME_DATE=$(git log -1 --format=%cd --date=format:'%B %Y' -- 'Resume/Meric_Altug_Gemalmaz_Resume.pdf')
+          CV_DATE=$(git log -1 --format=%cd --date=format:'%B %Y' -- 'CV/Meric_Altug_Gemalmaz_CV.pdf')
+          printf '{"resume": "%s", "cv": "%s"}\n' "$RESUME_DATE" "$CV_DATE" > doc-dates.json
+          if [ -z "$(git status --porcelain doc-dates.json)" ]; then
+            echo "Document dates unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add doc-dates.json
+          git commit -m "Update document dates [skip ci]"
+          git push
