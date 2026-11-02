@@ -144,10 +144,10 @@
   .btn:hover{border-color:var(--accent);color:var(--accent-strong);transform:translateY(-1px)}
   .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
   /* a document's own date, shown quietly inside its button: the résumé
-     and CV labels are pinned at publish time, like the page's footer date;
+     and CV labels are pinned in the markup as a fallback, like the page's footer date, and are refreshed on page load from doc-dates.json;
      shown as "· Updated Month Year" so the date reads as a last-updated
-     date. The labels are not updated automatically; change the label
-     text here when a new résumé or CV is published. */
+     date. The labels are refreshed from doc-dates.json, which is maintained by the Update document dates workflow from git history, so they update automatically
+     when a new résumé or CV is published. */
   .btn .doc-date{font-size:12.5px;font-weight:600;letter-spacing:.02em;opacity:.72}
   .btn.primary:hover{background:var(--accent-strong);color:var(--on-accent-hover)}
   .portrait-card{text-align:center}
@@ -1945,5 +1945,5 @@ var sc_security="8ae43188";
 <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
 <noscript><div class="statcounter"><a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13362915/0/8ae43188/1/" alt="Web Analytics Made Easy - Statcounter" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
-</body>
+<script>fetch("doc-dates.json").then(function(response){if(!response.ok){throw new Error("Document dates request failed");}return response.json();}).then(function(dates){document.querySelectorAll("[data-doc-date]").forEach(function(element){var value=dates[element.getAttribute("data-doc-date")];if(value){element.textContent="· Updated "+value;}});}).catch(function(){});</script></body>
 </html>
