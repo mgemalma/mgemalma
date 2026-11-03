@@ -1,0 +1,39 @@
+name: Update footer date
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-footer-date:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update footer date
+        run: |
+          DATE=$(git log -1 --format=%cd --date=format:'%Y-%m-%d' -- index.html)
+          python3 - "$DATE" <<'PY'
+          import datetime
+          import re
+          import sys
+          commit_date = sys.argv[1]
+          month_year = datetime.datetime.strptime(commit_date, '%Y-%m-%d').strftime('%B %Y')
+          path = 'index.html'
+          text = open(path).read()
+          text = re.sub(r"var BUILD_DATE = '[^']*';", "var BUILD_DATE = '" + commit_date + "';", text, count=1)
+          text = re.sub(r'(<span id="lastUpdated">)[^<]*(</span>)', r'\1' + month_year + r'\2', text, count=1)
+          open(path, 'w').write(text)
+          PY
+          if ! git diff --quiet -- index.html; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add index.html
+            git commit -m "Update footer date [skip ci]"
+            git push
+          fi
